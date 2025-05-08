@@ -7,13 +7,13 @@ public interface Queue<T> {
 
     boolean offer(Object t);
 
-    T remove();
+    T remove() throws NoSuchFieldException;
 
-    T poll();
+    T poll() throws NoSuchFieldException;
 
-    T element();
+    T element() throws NoSuchFieldException;
 
-    T peek();
+    T peek() throws NoSuchFieldException;
 
     boolean isEmpty();
 

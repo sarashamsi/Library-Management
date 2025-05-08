@@ -5,5 +5,5 @@ public interface Collection<T> {
     boolean isEmpty();
     boolean add(T t);
     boolean contains(Object o);
-    boolean remove(Object o);
+    boolean remove(Object o) throws NoSuchFieldException;
 }

@@ -23,7 +23,7 @@ public class Library {
         memberManager.addMember(member);
     }
 
-    public void borrowBook(String isbn, String memberId) {
+    public void borrowBook(String isbn, String memberId) throws NoSuchFieldException {
 
         // Check if the book exists and hasn't been borrowed
         if (bookManager.isBookAvailable(isbn)) {
@@ -49,7 +49,7 @@ public class Library {
         }
     }
 
-    public void returnBook(String isbn, String memberId) {
+    public void returnBook(String isbn, String memberId) throws NoSuchFieldException {
 
         bookManager.setBookAvailability(isbn, true); // Book is returned so it is available
         Transaction transaction = transactionManager.addTransaction(bookManager.getBookByIsbn(isbn).getTitle(),
@@ -66,7 +66,7 @@ public class Library {
         }
     }
 
-    public Transaction getLastTransaction(String memberId) {
+    public Transaction getLastTransaction(String memberId) throws NoSuchFieldException {
         return memberManager.getLastTransaction(memberId);
     }
 

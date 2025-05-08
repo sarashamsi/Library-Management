@@ -3,7 +3,7 @@ import library.Library;
 import library.Member;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws NoSuchFieldException {
         Library library = new Library();
 
         // Adding books
